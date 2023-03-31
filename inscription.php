@@ -1,3 +1,6 @@
+<?php
+include 'php/traitement/php_inscription.php';
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -8,7 +11,7 @@
     <title>Inscription</title>
 </head>
 <header>
-    <?php include 'include/header.php'?>
+    <?php include 'php/include/header.php'?>
 </header>
 <body>
 <center>
@@ -52,6 +55,6 @@
 </body>
 
 <footer>
-    <?php include 'include/footer.php'?>
+    <?php include 'php/include/footer.php'?>
 </footer>
 </html>
