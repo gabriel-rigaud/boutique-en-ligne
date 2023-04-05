@@ -8,7 +8,7 @@
     <title>Profil</title>
 </head>
 <header>
-    <?php include 'include/header.php'?>
+    <?php include 'php/include/header.php'?>
 </header>
 <body>
 
@@ -56,6 +56,6 @@
 </body>
 
 <footer>
-    <?php include 'include/footer.php'?>
+    <?php include 'php/include/footer.php'?>
 </footer>
 </html>

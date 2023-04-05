@@ -13,20 +13,22 @@
 </header>
 <body>
 <center>
-<form id="login-form" class="container" method="post">
-    <h2>Connexion</h2><br>
-    <div>
-        <label for="login">Login</label>
-        <input type="login" id="login" name="login" placeholder="Entre ton login" required>
-    </div>
-    <div>
-        <label for="password">Mot de passe:</label>
-        <input type="password" id="password" name="password" placeholder="Entre ton password" required>
-    </div>
-    <div><br>
-        <button class="bouton-bleu" type="submit">Se connecter</button>
-    </div>
-</form>
+    <form id="login-form" class="container" method="post">
+        <h2>Connexion</h2><br>
+        <div>
+            <label for="login">Login</label>
+            <input type="text" id="login" name="login" placeholder="Entre ton login" required>
+        </div>
+
+        <div>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" placeholder="Entre ton password" required>
+        </div>
+
+        <div><br>
+            <button class="bouton-bleu" type="submit">Se connecter</button>
+        </div>
+    </form>
 <div id="error-message"></div>
 </center>
 </body>

@@ -22,7 +22,7 @@ $adresse_livraison = $_POST['adresse_livraison'];
 $adresse_facturation = $_POST['adresse_facturation'];
 
 // Vérification si l'utilisateur existe déjà
-$sql = "SELECT id_utilisateur FROM Utilisateru WHERE nom_utilisateur = '$nom_utilisateur'";
+$sql = "SELECT id_utilisateur FROM Utilisateurs WHERE nom_utilisateur = '$nom_utilisateur'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

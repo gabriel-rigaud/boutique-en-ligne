@@ -10,51 +10,53 @@ include 'php/traitement/php_inscription.php';
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inscription</title>
 </head>
+<body>
 <header>
     <?php include 'php/include/header.php'?>
 </header>
-<body>
 <center>
-<form id="login-form" class="container" method="post">
-    <h2>Inscription</h2><br>
-    <div>
-        <label for="login">Login</label>
-        <input type="login" id="login" name="login" placeholder="Entre ton login" required>
-    </div>
+    <form id="inscription-form" class="container" method="post">
+        <h2>Inscription</h2><br>
+        <div>
+            <label for="login">Login:</label>
+            <input type="text" id="login" name="nom_utilisateur" placeholder="Entre ton login" required>
+        </div>
 
-    <div>
-        <label for="email">Adresse email:</label>
-        <input type="email" id="email" name="email" placeholder="Entre ton email" required>
-    </div>
+        <div>
+            <label for="email">Adresse email:</label>
+            <input type="email" id="email" name="email_utilisateur" placeholder="Entre ton email" required>
+        </div>
 
-    <div>
-        <label for="adresse-liv">Adresse De Livraison:</label>
-        <input type="text" id="livraison" name="livraison" placeholder="Entre ton adresse de livraison" required>
-    </div>
+        <div>
+            <label for="livraison">Adresse de livraison:</label>
+            <input type="text" id="livraison" name="adresse_livraison" placeholder="Entre ton adresse de livraison" required>
+        </div>
 
-    <div>
-        <label for="adresse-fact">Adresse De Facturation:</label>
-        <input type="text" id="Facturation" name="Facturation" placeholder="Entre ton adresse de facturation" required>
-    </div>
+        <div>
+            <label for="facturation">Adresse de facturation:</label>
+            <input type="text" id="facturation" name="adresse_facturation" placeholder="Entre ton adresse de facturation" required>
+        </div>
 
-    <div>
-        <label for="password">Mot de passe:</label>
-        <input type="password" id="password" name="password" placeholder="Entre ton mots de passe" required>
-    </div>
+        <div>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="mot_de_passe" placeholder="Entre ton mot de passe" required>
+        </div>
 
-    <div>
-        <label for="password">Confirmation du mot de passe:</label>
-        <input type="confirpassword" id="confirmpassword" name="confirmpassword" placeholder="Retape ton mots de passe" required>
+        <div>
+            <label for="confirmpassword">Confirmation du mot de passe:</label>
+            <input type="password" id="confirmpassword" name="mot_de_passe2" placeholder="Retape ton mot de passe" required>
+        </div><br>
 
-    <div><br>
-        <button class="bouton-bleu" type="submit">Se connecter</button>
-    </div>
-</form>
-<div id="error-message"></div>
+        <div>
+            <button class="bouton-bleu" type="submit">S'inscrire</button>
+        </div>
+    </form>
+
+    <div id="error-message"></div>
 </center>
-</body>
 
 <footer>
     <?php include 'php/include/footer.php'?>
 </footer>
+</body>
 </html>
