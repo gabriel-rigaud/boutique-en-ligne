@@ -1,25 +1,23 @@
 <?php
-require 'php/class/class_user.php';
-session_start();
+    require 'php/class/class_user.php';
 
-// Connexion à la base de données
-$host = 'localhost';
-$dbname = 'boutique';
-$user = 'root';
-$password = '';
+    session_start();       
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $user, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
-}
+    $user = new user('blog');
+    #$user = new user('mehdi-douib_blog');
 
-// Requête d'exemple pour récupérer tous les utilisateurs
-$sql = "SELECT * FROM utilisateurs";
-$stmt = $pdo->query($sql);
-$utilisateurs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if(isset($_SESSION["user"]))
+        {
+            header("Location:index.php");
+        }
+    else
+        {                         
+            if(isset($_POST["valid_co"], $_POST["login"], $_POST["password"]) && !empty($_POST["login"]) && !empty($_POST["password"]))
+                {                              
+                    $login = $_POST["login"];
+                    $password = $_POST["password"];
 
-// Fermeture de la connexion
-$pdo = null;
+                    $user->connect($login, $password);                                        
+                }
+        }
 ?>

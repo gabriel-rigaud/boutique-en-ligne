@@ -1,4 +1,9 @@
-<?php include 'php/traitement/php_connexion.php'; ?>
+<?php 
+    require 'php/traitement/php_connexion.php';
+    require 'php/include/connexion.php';
+
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -7,16 +12,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connexion</title>
+    <link rel="icon" href="/src/image/logo-onglet.png">
 </head>
 <header>
-    <?php include 'php/include/header.php'?>
+    <?php require 'php/include/header.php'?>
 </header>
 <body>
-<center>
+<center><br><br>
     <form id="login-form" class="container" method="post">
         <h2>Connexion</h2><br>
         <div>
-            <label for="login">Login</label>
+            <label for="login" name="login">Login</label>
             <input type="text" id="login" name="login" placeholder="Entre ton login" required>
         </div>
 
@@ -26,14 +32,14 @@
         </div>
 
         <div><br>
-            <button class="bouton-bleu" type="submit">Se connecter</button>
+            <button class="bouton-bleu" name="valid_co" value="Connexion" type="submit">Se connecter</button>
         </div>
     </form>
-<div id="error-message"></div>
+    <div id="error-message"></div><br><br><br><br><br>
 </center>
 </body>
 
 <footer>
-    <?php include 'php/include/footer.php'?>
+    <?php require 'php/include/footer.php'?>
 </footer>
 </html>

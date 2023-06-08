@@ -1,0 +1,503 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New";
+}
+
+.bouton-bleu{
+    color: white;
+    background: #0069d9;
+    border-color: #0062cc;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.bouton-bleu:active{
+    color: red;
+}
+
+.title{
+    font-size: 60px;
+    padding: 40px;
+    text-align: center;
+}
+
+.logo{
+    float: left;
+    width: 70px;
+    border-radius: 15px;
+}
+
+.nav-top{
+    background: black;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.nav-top-log{
+    float: right;
+}
+
+.nav-top-log a:hover{
+    background: red;
+}
+
+.nav-top-link{
+    float: left;
+    cursor: pointer;
+}
+
+.nav-bottom{
+    background: gray;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 70px;
+}
+
+.nav-bottom a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 70px;
+    padding: 0 20px;
+    float: left;
+}
+
+.nav-bottom a:active{
+    color: red;
+    transition: 4ms;
+}
+
+#base {
+    position: absolute;
+    top: 43%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+}
+
+#texte {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+}
+
+#texte:after {
+    content: '|';
+    animation: blink .7s infinite;
+}
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.container{
+    margin-top: 10%;
+    text-align: center;
+    width: 850px;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+.container input{
+    text-align: center;
+    font-size: 15px;
+}
+
+.container div{
+    padding: 4px;
+}
+
+.container-admin{
+    margin-top: 8%;
+    text-align: center;
+    width: 100rem;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+.icon-right-circled{
+    color: red!important;
+}
+
+.icon-left-circled{
+    color: blue!important;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.couv-text {
+    font-size: 2rem;
+    color: black;
+    letter-spacing: 0.5rem;
+}
+
+.couv-img {
+    max-width: 400px;
+    margin-top: 100px;
+    border-radius: 30px;
+}
+
+.couv-btn {
+    background: black;
+    color: white;
+    display: inline-block;
+    margin: 30rem;
+    padding: 0.5rem 1rem;
+}
+
+.form-group {
+    display: inline-block;
+}
+
+.form-control {
+    width: 300px;
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid #ccc;
+}
+
+.form-commentaire{
+    font-size: 20px;
+    text-align: center;
+}
+
+.input-commentaire{
+    font-size: 18px;
+    width: 100%;
+    resize: none;
+    height: 100px;
+}
+
+#main_articles{
+    text-align: center;
+}
+
+#main_articles section.articles{
+    margin: 90px;
+}
+
+#main_articles section.articles a{
+    background: black;
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+#main_articles section.articles .date_articles{
+    margin: 10px;
+    color: red;
+}
+
+.section_article{
+    text-align: center;
+    margin-top: 8.5rem;
+}
+
+.section_article h1{
+    padding: 30px;
+}
+
+.section_article p{
+    margin: 30px;
+}
+
+.section_article article{
+    margin: 30px;
+}
+
+.card_index{
+    margin: 20px;
+}
+
+.card_index a{
+    background: black;
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.card_index h1{
+    margin: 10px;
+}
+
+.image-boutique{
+    width: 350px;
+    transition: transform 0.3s;
+}
+
+.image-boutique:hover {
+    transform: scale(1.2);
+}
+
+.container-article{
+    margin-top: 90px;
+    float: right;
+}
+
+.image-article{
+    width: 600px;
+    float: left;
+}
+
+.image-boutique-admin{
+    width: 300px;
+}
+
+#boutique{
+    color: white;
+    margin-top: 8.5rem;
+    text-align: center;
+    background: grey;
+}
+
+#boutique h1{
+    margin: 60px;
+}
+
+#boutique a{
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+}
+
+#boutique a:hover{
+    background: blue;
+    padding: 10px;
+    transition: 3ms;
+}
+
+#boutique a:active{
+    color: red;
+    transition: 3ms;
+}
+
+.titre-boutique{
+    margin: 60px;
+    text-align: center;
+}
+
+.par_page{
+}
+
+.prix{
+    color: red;
+}
+
+.par_chiffre a{
+    color: blue;
+    text-decoration: none;
+}
+
+.par_suivant{
+    text-decoration: none;
+}
+
+.par_avant{
+    text-decoration: none;
+}
+
+.submit{
+    cursor: pointer;
+}
+
+.promo-text{
+    color: white;
+    background: black;
+    float: right;
+}
+
+.promo-btn {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #0069d9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.promo-btn .fa-toggle-on,
+.promo-btn .fa-toggle-off {
+    margin-right: 5px;
+    transition: transform 0.3s ease;
+}
+
+.promo-btn.active {
+    background-color: red;
+}
+
+.promo-btn.active .fa-toggle-off {
+    display: none;
+}
+
+.promo-btn:not(.active) .fa-toggle-on {
+    display: none;
+}
+
+.icon-trash {
+    background-color: grey;
+    color: red!important;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-edit {
+    background-color: grey;
+    color: green!important;
+    width: 30px;
+    height: 30px;
+}
+
+/* Style général du footer */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.article footer{
+    margin-top: 170rem;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-section {
+    flex-basis: 30%;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.social-liens-icons {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.social-liens-icons li {
+    margin-right: 10px;
+}
+
+.social-liens-icons li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Style du bas du footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 12px;
+    color: #666;
+}
+
+@media (max-width: 480px) {
+   
+    .couv-img {
+        max-width: 120px;
+        margin-right: 900px;
+        margin-top: 50px;
+        border-radius: 15px;
+    }
+
+    #base {
+        top: 43%;
+        left: 28%;
+    }
+
+    #texte {
+        font-size: 1rem;
+    }
+    .nav-top {
+        height: 50px;
+    }
+
+    .nav-top-log {
+        float: none;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .nav-top-link {
+        display: none;
+    }
+
+    nav img{
+        display: none;
+    }
+
+    .nav-bottom {
+        height: 50px;
+        top: 50px;
+    }
+
+    .nav-bottom a {
+        font-size: 10px;
+        line-height: 50px;
+        padding: 0 10px;
+    }
+
+    .section_article img{
+        width: 400px;
+    }
+    
+    .container{
+        margin-top: 10rem;
+        width: 200px;
+    }
+
+    #boutique{
+        margin-top: 100px;
+        width: 100%;
+    }
+    .panier h1{
+        margin-left: -5rem;
+    }
+
+    .panier table{
+        margin-left: -8rem;
+        font-size: 10px;
+    }
+}

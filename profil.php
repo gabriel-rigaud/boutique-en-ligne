@@ -1,61 +1,68 @@
-<!doctype html>
-<html lang="fr">
+<?php 
+    include 'php/traitement/php_profil.php'; 
+    require 'php/include/connexion.php'; 
+?>
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profil</title>
+    <title>Mon Compte</title>
+    <link rel="icon" href="/src/image/logo-onglet.png">
 </head>
+
 <header>
-    <?php include 'php/include/header.php'?>
+    <?php require 'php/include/header.php';?>
 </header>
+
 <body>
 
-<center>
-    <form id="login-form" class="container" method="post">
-        <h2>Profil</h2>
-        <p>Modifié vos informations !</p>
-        <br>
-        <div>
-            <label for="login">Login</label>
-            <input type="login" id="login" name="login" placeholder="Entre ton login" required>
-        </div>
+<center><br><br>
+<form  action="" id="login-form" class="container" method="post">
+    <h2>Modifier mes informations</h2><br>
 
-        <div>
-            <label for="email">Adresse email:</label>
-            <input type="email" id="email" name="email" placeholder="Entre ton email" required>
-        </div>
+    <!-- Affichage des messages -->
+    <?php if(!empty($user->msg_error)) { echo '<p class="alert alert-danger w-75 p-3 m-auto text-center">'.$user->msg_error.'</p>' ; }?></p>
+    <?php if(!empty($user->msg_valid)) { echo '<p class="alert alert-success w-75 p-3 m-auto text-center">'.$user->msg_valid.'</p>' ; }?></p>
+    <?php if(isset($msg_error_mdp)) { echo '<p class="alert alert-danger w-75 p-3 m-auto text-center">'.$msg_error_mdp.'</p>' ; }?></p>
 
-        <div>
-            <label for="adresse-liv">Adresse De Livraison:</label>
-            <input type="text" id="livraison" name="livraison" placeholder="Entre ton adresse de livraison" required>
-        </div>
 
-        <div>
-            <label for="adresse-fac">Adresse De Facturation:</label>
-            <input type="text" id="Facturation" name="Facturation" placeholder="Entre ton adresse de facturation" required>
-        </div>
+    <div class="form-group">
+        <label for="login">Login :</label>
+        <input type="text" aria-describedby="emailHelp" name="login" value="<?= $_SESSION["user"]->login ?>" required>
+    </div><br>
 
-        <div>
-            <label for="password">Mot de passe:</label>
-            <input type="password" id="password" name="password" placeholder="Entre ton mots de passe" required>
-        </div>
+    <div class="form-group">
+        <label for="email" >Email :</label>
+        <input type="text" aria-describedby="emailHelp" name="email" value="<?= $_SESSION["user"]->email ?>" required>
+    </div><br>
 
-        <div>
-            <label for="password">Confirmation du mot de passe:</label>
-            <input type="confirpassword" id="confirmpassword" name="confirmpassword" placeholder="Retape ton mots de passe" required>
+    <div class="form-group">
+        <label for="old_password">Mot de passe actuel :</label>
+        <input type="password" placeholder="Entre ton mots de passe actuel" aria-describedby="emailHelp" name="old_password" required>
+    </div>
 
-            <div><br>
-                <button class="bouton-bleu" type="submit">Se connecter</button>
-            </div>
-    </form>
-    <div id="error-message"></div>
+    <div class="form-group">
+        <label for="nw_password">Nouveau mot de passe :</label>
+        <input type="password" placeholder="Entre ton nouveau mots de passe" aria-describedby="emailHelp" name="nw_password">
+    </div>
+
+    <div class="form-group">
+        <label for="conf_password">Confirmer mot de passe :</label>
+        <input type="password" placeholder="Confirme ton nouveau mots de passe" aria-describedby="emailHelp" name="conf_password">
+    </div>
+
+    <div>
+        <input class="bouton-bleu" type="submit" name="valid_modif" value="Modifier">
+    </div>
+
+</form><br><br><br><br><br>
 </center>
 
 </body>
-
 <footer>
-    <?php include 'php/include/footer.php'?>
+    <?php require 'php/include/footer.php';?>
 </footer>
 </html>
